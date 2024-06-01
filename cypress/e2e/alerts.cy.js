@@ -30,7 +30,7 @@ it.only('conformation alert by cancel',()=>{
 it.only('prompt alert',()=>{
     cy.visit("https://the-internet.herokuapp.com/javascript_alerts")
     cy.window(),then((win) =>{
-        cy.stub(win,'prompt').return("Shree");
+        cy.stub(win,'prompt').return('Shree');
     })
     cy.get("button[onclick='jsPrompt()']").click()
     cy.get("#result").should('have.text',"You entered: shree")
