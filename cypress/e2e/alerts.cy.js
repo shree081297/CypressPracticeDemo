@@ -21,7 +21,7 @@ it.skip('conformationalert',()=>{
 })
 it.only('conformation alert by cancel',()=>{
     cy.visit("https://the-internet.herokuapp.com/javascript_alerts")
-    cy.get("button[onclick='jsConfirm()']").click()
+    cy.get("button[onclick='jsConfirm()']").click();
     cy.on('window:confirm',(t)=>{
         except(t).to.contains("I am a JS Confirm");
     })
